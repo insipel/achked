@@ -1,0 +1,1 @@
+gcc $1 -L/home/animesh/pgms/libs -lbuild_tree -larray_elems

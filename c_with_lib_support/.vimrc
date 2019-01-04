@@ -1,0 +1,164 @@
+" my configs
+set nocompatible
+set noswapfile
+set nobackup
+set nu               "set number
+set hls              "set highlightsearch
+set ru               "set ruler
+set showcmd
+
+if has("gui_running")
+  set lines=50
+  set columns=171
+endif
+" set guifont=Courier_New:h9:cANSI
+" set guifont=MiscFixed
+" set guifont=Adobe\ Courier\ 9
+set guifont=Courier\ 10\ Pitch\ 10
+set mouse=a
+set tabstop=4
+
+" The following three setting are required for INPUTing <TAB> as spaces.
+set smarttab
+set shiftwidth=4
+set expandtab
+set textwidth=70
+set showmatch
+
+" Add full file path to your existing statusline
+" set statusline=%F
+set statusline=%f%m%r%h\ [%L]\ [%{&ff}]\ %y%=[%p%%]\ [line:%05l,col:%02v]   
+
+" Ensure correct delete/backspace mapping, even from ssh
+" set t_kb
+" set t_kD
+set backspace=indent,eol,start
+
+" Helpful while editing multiple # of files
+map <F1> :e#1<C-M>
+map <F2> :e#2<C-M>
+map <F3> :e#3<C-M>
+map <F4> :e#4<C-M>
+map <F5> :e#5<C-M>
+map <F6> :e#6<C-M>
+map <F7> :e#7<C-M>
+map <F9>  :e#8<C-M>
+map <F10> :e#9 <C-M>
+map <F11> :e#10<C-M>
+map <S-F1> :e#11<C-M>
+map <S-F2> :e#12<C-M>
+map <S-F3> :e#13<C-M>
+map <S-F4> :e#14<C-M>
+map <S-F5> :e#15<C-M>
+map <S-F6> :e#16<C-M>
+map <S-F7> :e#17<C-M>
+map <S-F8> :e#18<C-M>
+map <S-F9> :e#19<C-M>
+map <S-F10> :e#20<C-M>
+
+map <F12> :e .<C-M>
+
+map gh :e#<C-M>
+
+map do $
+map ca ^
+map tv %
+map ff :files<CR>
+
+map <S-F11> "+y
+map <S-F12> "+gP
+
+" This mapping is added to search the pattern selected using Visual option.
+vnoremap * y/<C-R>"<CR>
+
+" For virtual column movement
+noremap <Up> gk
+noremap <Down> gj
+
+abb fff #ifdef DEBUG_FPM_BR<C-M>ksPrintf(" \n");<C-M>#endif<C-M>
+
+set tags=$CWS/tags
+
+" Following are the default settings, you will get with GVim 6.1
+source $VIMRUNTIME/vimrc_example.vim
+" source $VIMRUNTIME/mswin.vim
+" behave mswin
+
+set noswapfile
+set nobackup
+
+set diffexpr=MyDiff()
+function MyDiff()
+  let opt = ''
+  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+  silent execute '!C:\Vim\vim61\diff -a ' . opt . v:fname_in . ' ' . v:fname_new . ' > ' . v:fname_out
+endfunction
+
+highlight Normal guifg=grey85
+highlight Normal guibg=black
+highlight Cursor guifg=Red guibg=white
+
+"just trying to explore somethings with my own indentation format.
+function StripCurrentLine()
+    let g:strippedLine = matchstr(getline("."),'\/\*.*\*\/')
+endfunction
+
+function IndentComments()
+    let l:currentLine = getline(".")
+    let l:isCurrentLineComment = 0
+    if currentLine =~ "^[\t]*\/\*.*" | let isCurrentLineComment = 1 | endif
+    if isCurrentLineComment == 1 | call StripCurrentLine() | endif
+    call cursor(line(".") - 1, col("."))
+    call append(line("."), g:strippedLine)
+    "exe "normal ".1."dd"
+    "exe " put = g:strippedLine"
+endfunction
+
+" function BreakLines()
+"     let l:currentLine       = getline(".")
+"     let l:totalLines        = line("$")
+"     let l:currentLineNumber = line(".")
+" 
+"     " Continue till the last line
+"     while(l:currentLineNumber <= l:totalLines)
+"     {
+"         " Move to next line.
+"         cursor(l:currentLineNumber + 1, col("."))
+" 
+"         " If current line has less than 75 charcters, then move to next line.
+"         if(strlen(currentLine) < 75)
+"             continue
+"         endif
+"     }
+" endfunction
+
+" Pattern to search the count of searches
+" function! SearchCount(pattern)
+"     let s:i = 0
+"     let s:x = col('.')
+"     let s:y = line('.')
+"     call cursor(1,1)
+" 
+"     while(search(a:pattern, 'W'))
+"         let s:i = s:i +1
+"     endwhile
+" 
+"     " Reset cursor to inital position, then move to first match.
+"     if(s:i != 0)
+"         call cursor(s:y, s:x)
+"         call search(a:pattern, 'W')
+"     endif
+" 
+"     " Funky messages
+"     if(s:i == 0)
+"         echomsg 'No matches'
+"     elseif(s:i == 1)
+"         echomsg 'Found 1 match'
+"     else
+"         echomsg 'Found '.s:i.' matches'
+"     endif
+"     set @\/ = pattern
+" endfunction
+
+

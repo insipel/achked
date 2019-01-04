@@ -1,0 +1,13 @@
+Library commands:
+==================
+    gcc -c build_tree_lib.c -o build_tree_lib.o
+    ar rcs libbuild_tree.a build_tree_lib.o
+    mkdir libs
+    mv libbuild_tree.a libs
+    gcc print_level_tree.c -Llibs -lbuild_tree
+
+
+gcc -c lib_array_elems.c -o array_elems.o 
+ar rcs libarray_elems.a array_elems.o 
+mv libarray_elems.a ../libs/
+
