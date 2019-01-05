@@ -55,8 +55,8 @@ def is_bst_dnc(root):
 
 
 def leet_isValidBST(root):
-    prev = None
-    return leet_validate(root, prev);
+    prev = [None]
+    return leet_validate(root, prev)
 
 def leet_validate(node, prev):
     if not node:
@@ -65,11 +65,36 @@ def leet_validate(node, prev):
     if not leet_validate(node.left, prev):
         return False
 
-    if (prev and prev.data >= node.data):
+    if (prev[0] and prev[0].data >= node.data):
          return False
 
-    prev = node;
-    return leet_validate(node.right, prev);
+    prev[0] = node;
+    if not leet_validate(node.right, prev):
+        return False
+
+    return True
+
+def is_bst_inorder_iter(root):
+    prev_node = None
+    st = []
+
+    while root:
+        st.append(root)
+        root = root.left
+
+    while st:
+        node = st.pop(-1)
+
+        if prev_node and prev_node.data >= node.data:
+            return False
+
+        prev_node = node
+        node = node.right
+        while node:
+            st.append(node)
+            node = node.left
+
+    return True
 
 def main():
 
@@ -77,7 +102,7 @@ def main():
     left = root.left = Node(10)
     right = root.right = Node(19)
     left.left = Node(5)
-    left.left.right = Node(6)
+    left.left.right = Node(4)
     left.right = Node(12)
     left.right.right = Node(13)
     #left.right.left = Node(6)
@@ -86,10 +111,11 @@ def main():
     #root.right = Node(4)
 
     print_level_tree(root)
+    if(is_bst_inorder_iter(root)):
     #if(leet_isValidBST(root)):
     #if(is_bst_range(root, float('-inf'), float('inf'))):
-    is_bst, bst_min, bst_max = is_bst_dnc(root)
-    if(is_bst):
+    #is_bst, bst_min, bst_max = is_bst_dnc(root)
+    #if(is_bst):
         print("It's a BST")
     else:
         print("Not a BST")

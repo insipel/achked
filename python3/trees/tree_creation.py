@@ -60,11 +60,16 @@ def print_level_tree(root):
         if prev_level != level:
             print()
             prev_level = level
-        print(node.data, end=' ')
+        if node:
+            print(" %02d" % (node.data), end=' ')
+        else:
+            print(' .', end = ' ')
 
-        if node.left:
+        #if node.left:
+        if node:
             q.append([node.left, level+1])
-        if node.right:
+        #if node.right:
+        if node:
             q.append([node.right, level+1])
 
     print()
