@@ -41,10 +41,10 @@ def create_tree(l):
 def print_tree(root):
 
     if not root:
-        print(".")
+        print(".", end = ' ')
         return
     print_tree(root.left)
-    print(root.data)
+    print(root.data, end = ' ')
     print_tree(root.right)
 
 def print_level_tree(root):
