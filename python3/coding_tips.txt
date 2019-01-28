@@ -1,0 +1,51 @@
+1. range should go 1 beyond the number I want to work on.
+    made mistakes in the mssa_rec_dnc() algorithm.
+2. range only take integer attribute. so if i do mid = st+end/2, then
+    it results in float in python3. using this mid in range operator results
+    in run-time error. Use int(mid) to use mid.
+
+3. Operators in python3
+    ** : exponent/power operator e.g. n**2 is n-squared 
+    // : int division eg. 10//3 = 3
+    /  : floating point division. 10/3 = 3.33333
+    
+
+4. boolean are True and False
+5. Python object operator run-time complexity
+    https://wiki.python.org/moin/TimeComplexity
+    len is O(1) for list/set/tuple
+6. looping using range() Vs while() loop. Later one is lot faster
+    than range() operation
+
+
+Tips:
+Printing:
+1. Printing without newline
+    print('.', endl=' ')
+
+Sorting:
+1. Sorting a list of tuple. 2 ways
+    a. lambda function
+        sorted(my_list,key=lambda tup: tup[1])
+    b. itemgetter way
+        from operator import itemgetter
+        sorted(my_list, key=itemgetter(1))
+    Out of these two, itemgetter way is a lot fast than lambda function way.
+
+List:
+* Peek via s[-1]. There is no s.peek() method.
+* Generate a hashset from a list
+    hset = dict((ch, 0) for ch in lst)
+
+========
++ Set: +
+========
+s.add(x) 	  	add element x to set s
+s.remove(x) 	remove x from set s; raises KeyError if not present
+s.discard(x) 	removes x from set s if present
+s.pop() 	  	remove and return an arbitrary element from s;
+                raises KeyError if empty
+s.clear()       remove all elements from set s
+
+
+
