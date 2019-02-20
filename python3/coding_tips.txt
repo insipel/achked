@@ -8,6 +8,7 @@
     ** : exponent/power operator e.g. n**2 is n-squared 
     // : int division eg. 10//3 = 3
     /  : floating point division. 10/3 = 3.33333
+    %  : Modulo operator
     
 
 4. boolean are True and False
