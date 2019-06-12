@@ -1,0 +1,53 @@
+
+
+
+Old Content below(Python 2):
+
+"""
+Design a system to handle "places nearby" queries. That is, given a location expressed as a (lat, long) and a radius R, your system will return all places from the (lat, long) within the radius.
+"""
+
+Reqs:
+    1. Query places based lat, long, category
+    2. Add places to my db
+    
+
+Non-functional reqs:
+1. read qps: 100K qps
+2. write qps: 100 qps
+3. highly available
+4. latency requirement: 500ms
+5. Geolocation
+6. #places of interest ~10B
+
+system capacity estimation:
+1. storage:
+    each place entry: key 8B, name: 100B, place id: 6B details: 100B, category:8B ~ 256B
+    storage: 2.6TB
+2. B/W estimation:
+    B/W: 128B * 100K * 2= 2^10 * 100K = 100Mbps
+3. Memory estimate:
+    cache size: 20 % 2 * 1.3TB = 12GB
+    
+    
+APIs:
+
+1. place_query(api_key_id, lat, long, category, radius)
+2. add_places(api_key_id, category, lat, long, name, details)
+
+db tables:
+lat, long: Primary keys
+category: secondary
+
+divide the whole map into n1 number of times (20k x 20k grid, size(tile): 1000miles, #tiles: 400 tiles): 8bits
+divide the tiles: , 1/8, 1/4, 1/2, 1, 2, 5, 10, 20 (, 50 (4bits), 200 (6bits), 1000miles (8)
+region id: 16K regions (14bits)
+types of tables: based on user activity
+
+another table which can help faciliate the more granular queries, tile id, secondary (secondary_tile), place details
+
+id: 48bits
+
+
+
+

@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+# DP code is not producing correct output
+# recursion is good.
+
 def countWaysToClimb(steps, n):
     if n < steps[0]:
         return 0
@@ -31,8 +34,22 @@ def countWaysToClimb_dp(steps, n):
             
     return s[n]
 
+def simple_climb(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    if n == 2:
+        return 2
+
+    return simple_climb(n-1) + simple_climb(n-2)
+
 def main():
-    print(countWaysToClimb_dp([2,3], 7))
+    #print(countWaysToClimb_dp([2,3], 7))
+    n = 4
+    print(countWaysToClimb([1,2], n))
+    print(countWaysToClimb_dp([1,2], n))
+    print(simple_climb(n))
 
 if __name__ == '__main__':
     main()

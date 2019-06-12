@@ -7,6 +7,25 @@ class Node:
         self.left = None
         self.right = None
 
+def diameter2(root):
+    if not root:
+        #print("none dt as: ", 0)
+        return -1, 0
+
+    lh, ld = diameter2(root.left)
+    rh, rd = diameter2(root.right)
+
+    my_dt = 0
+    if lh != -1:
+        my_dt = ld+1
+    if rh != -1:
+        my_dt += rd+1
+
+    #print("returning dt for:", root.data, ", as: ", max(ld, rd, my_dt))
+    return 1, max(ld, rd, my_dt)
+
+
+
 def diameter(root):
     
     if not root:
@@ -67,11 +86,14 @@ def print_level_tree(root):
     print()
 
 def main():
-    l = [13, 2, 8, 9, 10, 5, 4, 3, 14]
+    #l = [13, 2, 8, 9, 10, 5, 4, 3, 14]
+    #l = [10, 6, 9, 8, 7, 11, 13, 12]
+    l = [10]
     root = create_tree(l)
     print_level_tree(root)
     ht, dt = diameter(root)
     print("Height: ", ht, ", Diameter:", dt)
+    print("Diameter2:", diameter2(root))
 
 
 if __name__ == '__main__':

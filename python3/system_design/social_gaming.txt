@@ -1,0 +1,95 @@
+	We are creating a large scalable mobile game.  I am writing the client code and you are writing the server implementation.  I need you to provide the Server API that the client will use to play the game.
+	
+	Game rules:
+	
+	2 human players
+	each player has a 24x24 grid
+	each player has 5 ships. (1x2 1x3 1x3 1x4 1x5)
+	
+	Game play:
+	
+	1. create a game
+	2. place all ships
+	
+	each player places ships on their grid
+	  0 1 2 3 4 5 6 …
+	0 X S X X X X X
+	1 X S S S S S X
+	2 X S X X X S X
+	3 X X X X X X X
+	4 X X X X X X X
+	…
+	
+	3. play
+	each turn:
+		player1 fires a shot at grid point x,y
+		game says hit or miss
+		if all ships are hit, ex 1x2 needs to be hit both spots (5,1) (5,2) player1 wins
+		else next player turn
+		
+	4. someone wins
+	
+	Create API for server
+return func(params)
+get/post name(params) response
+
+
+functional reqs
+1. Users should be able to create games/choose opponents/play the game/abort/restart
+
+non-functional:
+1. low latency in player response
+2. high available/reliablity
+
+capacity:
+total users~ 1B users
+DAU/AUs ~100M users
+
+1. traffic/bw estimate:
+    assume each player makes a move every 5seconds:
+    
+2. storage estimate
+    ??
+    
+3. memory/cache estimate
+    keep Active games in memory/cache
+
+API: (https://)
+- register_player(api_user_key_id, name, dob, loc, lat, long, email, phone, hashed_password)
+    response: player_id
+- unregister(api_user_key_id, player_id)
+    respnose: True/False/Not found
+    
+- login_player(api_user_key_id, player_id, hashed_password)
+    response: Allow/Deny 
+- logout_player(api_user_key_id, player_id)
+    response: Success/Failure/Not Found
+    
+- show_profile(api_user_key_id, player_id)
+    response: Success/Failure, stats, personal details
+
+- create_game(api_user_key_id, player_id, lat, loc, )
+    return a list of players that player2
+    
+- place_ships(api_user_key_id, player_id, ship_size, orientation, start_x, start_y)
+    respnse: success/failure
+
+- start_as_first_player(api_user_key_id, player_id)
+    response: True/False
+    
+- attack_enemy(api_user_key_id, player_id, x, y)
+    response: hit/miss, x, y
+- update_my_board(api_user_key_id, player_id)
+    response: x, y, finished status:won/lost
+    
+   
+
+
+
+missed:
+multi session plays.
+focussed too much on non-API/non-playing aspect of the problem and lost all of
+the time there. I wrote APIs but then again, got wayled from the user mgmt
+side.
+
+
