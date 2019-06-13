@@ -22,7 +22,8 @@ def count_coin_change(T, D):
     return res[0][T]
 
 def main():
-    T = 13
+    #T = 13
+    T = 14
     D = [3, 8, 7, 9]
     print(count_coin_change(T, D))
 

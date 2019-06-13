@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+# If I use it for counting, then it counts duplicates as well.
 def min_coin_change(A, D):
     res = [float('inf')] * (A + 1)
 
@@ -42,8 +43,10 @@ def print_res(A, D, res):
     print(l)
 
 def main():
-    A = 13
+    #A = 13
+    A = 10
     D = [3, 8, 7, 9]
+    #D = [8, 7, 9, 3]
     print("Target:", A)
     print("Coins:", D)
     res = min_coin_change(A, D)
