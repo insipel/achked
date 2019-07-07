@@ -8,7 +8,8 @@ def working_wordbreak(word, dict):
     print(l)
 
     for i in range(n-1, -1, -1):
-        for j in range(i+1, n+1): # need to do n+1 as in the
+        #for j in range(i+1, n+1):# think j = i as start pt is sufficient enough
+        for j in range(i, n+1): # need to do n+1 as in the
             # statement, to fetch 'part', we need to extend j 1 beyond
             # the index. j will end at n, so in word[i:n] will include
             # i to n-1th chars from the word.
@@ -58,11 +59,13 @@ def main():
     print(wordbreak(word, dict))
 
     dict1 = {"mobile","samsung","sam","sung", 
-             "man","mango","icecream","and", 
+             "man","mango","icecream","k", "and", 
              "go","i","like","ice","cream"}
     #print(wordbreak("ilikelikeimangoiii", dict1))
     #print(wordbreak("samsungandmango", dict1))
+    #print(working_wordbreak("samsungandmango", dict1))
     print(wordbreak("samsungandmangok", dict1))
+    print(working_wordbreak("samsungandmangok", dict1))
 
 if __name__ == '__main__':
     main()

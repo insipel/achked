@@ -1,0 +1,312 @@
+Graphs:
+1. Graph Traversal (DFS, BFS)
+Level order graph print
+2. ✔ Shortest path b/w 2 nodes in an unweighted graph
+Print the shortest path from s to e
+3. ✔ Finding cycles in a graph
+4. ✔ Clone a graph
+5. Count number of island
+6. ✔ Topological Sort
+7. Dijkstra’s Algorithm
+8. Union of 2 graphs/Find
+9. ✔ Word Ladder (Prudhvi’s video)
+10. ✔ Find Order Of Characters From Alien Dictionary
+11. Knight's Tour On A Chess Board 
+12. Shortest Path In 2D Grid With Keys And Doors
+13. Zombie Clusters/Count Islands
+14. ✔ Find Order Of Characters From Alien Dictionary
+15. ✔ Given A Graph, Build A New One With Reversed Edges
+16. ✔ Indices Of Words In Text String
+17. ✔ Snakes and Ladders Matrix
+18. ✔ Detect cycle in Directed Graph
+19. ✔ Count Basins
+20. ✔ Longest Path In Weighted DAG (using Topo Sort)
+21. ✔ Shortest Distance From the Guard
+
+Sorting:
+Insertion sort
+Mergesort
+Quicksort
+Heapsort
+Nuts and Bolts!
+Merge_K_sorted_arrays
+Group the numbers
+Find Top K elements
+2 Sum
+3 Sum
+Lexicographical Order
+Nearest Neighbours
+Sort All Characters
+Find an integer not among four billion given ones 
+Sort a nearly sorted (or K-sorted array)
+Find minimum length unsorted subarray, sorting which makes the array sorted
+Search the element in a sorted and rotated Array
+Median of 2 sorted array (of same size, different sizes)
+Find the smallest and 2nd smallest elements in an array
+Second minimum using min comparisions ( tournament trees)
+Merge 2 sorted arrays
+Online Median calculation
+Find the rank Kth element
+Sort a file with 256B 64Bit integers
+
+
+
+Recursion:
+Count paths
+Generate all the permutations
+Generate all the combinations
+Generate All Possible Expressions That Evaluate To The Given Target Value
+Palindromic Decomposition Of A String
+Generate All Subsets Of A Set
+n Queen Problem
+How Many Binary Search Trees With n Nodes?
+Possible To Achieve Target Sum?
+Find All Well Formed Brackets
+Strings From Wild Card
+Power function to raise a double to an int power, including negative powers.
+Sudoku Solver
+Regex Matcher
+Diameter of a tree
+Edit distance
+Stairs climbing in given steps
+Fibonacci numbers
+Fitting tile blocks
+
+
+Linked List/Stack/Queues:
+Design And Implement LRU Cache
+Implement Hit Counter
+Implement make move in Tic Tac Toe and find winner in constant time
+Implement Tiny URL system
+Implement UUID generation
+Cycle Detection
+Dutch Flag
+Flatten A List
+Longest Substring With Balanced Parentheses
+Maximum In Sliding Window
+Find The Middle Node In A Singly Linked List
+Implement A Min Stack
+Swap kth Nodes In Given Linked List
+Reverse Given Linked List In Groups Of k
+Zip Given Linked List From Ends
+Add Two Numbers
+Clone Singly Linked List With Random Pointer
+Merge Sort A Linked List
+Valid Expression (See: Evaluate Expression)
+Implement a simple Skip List. (Certain startups are enamored with Skip Lists in their interviews)
+Alternative Node Split
+Find Intersection Of Two Singly Linked Lists
+Find Median Of Sorted Circular Singly Linked List
+Implement Queue Using Two Stacks
+Implement Stack Using Queue
+Implement max/min operations in a queue
+Sort a stack
+Find if linked list is palindrome
+3 stack with a single array
+
+
+Trees:
+DFS with manual stack
+BFS with queue
+Find if tree is balanced
+Tree height of a binary tree
+Delete node in a binary tree
+Single Value Tree (Unival trees)
+Is It A BST (range method, DnC)
+in-order Traversal of a Tree Without Recursion
+pre-order Traversal of a Tree Without Recursion
+Post-order Traversal of a Tree Without Recursion
+Print All Paths of a Tree
+Convert a Binary Tree into a Circular Doubly Linked List
+Least Common Ancestor (LCA)
+Lowest common ancestor(LCA)
+Merge Two BSTs
+Upside Down (iterative and recursive)
+Kth Smallest Element Of BST
+Balanced BST From A Sorted Array
+Height Of K-Ary Tree
+Clone a Binary Tree
+Mirror Image Of Binary Tree
+Populate Sibling Pointers
+Largest BST
+Construct Binary Tree using inorder and post
+Construct Binary Tree using inorder and pre
+Tree Iterator
+Find if 2 trees have same inorder string w/o iterator
+Find if 2 trees have same inorder string w iterator
+Find kth smallest element in a tree (recursive)
+Find kth smallest element in a tree (iterative with enhance DS)
+Find rank of a node
+Kth largest (recursive)
+Kth largest (iterative)
+Find 2nd largest number (in a segment tree)
+Tree diameter
+BST to doubly linked list
+
+
+DP:
+Max Path in a grid
+Trace the solution in max path
+Coin change (without index)
+Trace the solution in coin change
+Max path with -ve numbers
+Count path excluding 0s (or blocks)
+Coin change using Index concept
+Count #ways to make coin sum
+Coin change with minimum wastage
+Equal Sum Subset Partition
+Subsets counting up to K
+Does subset exists counting upto K
+2 Partitions with minimum difference
+Fibonacci numbers
+Knapsack problem
+Count ways to reach the N’th stair
+Robbery
+
+Levenshtein/Edit Distance
+Longest common subsequence and trace back
+Longest increasing subsequence
+Shortest common supersequence
+Cut The Rope
+Regex Matcher
+
+Word Break
+Alternating Coin Play
+Knight's tour!
+Minimum Coins
+Matrix Chain Multiplication
+Strings Interleave
+Word Wrap
+Largest sub-square matrix with all 1s 
+Egg Dropping puzzle
+
+
+Strings:
+Build a prefix trie
+Build a suffix trie
+Regex Matcher (recursive and DP)
+KMP
+Longest Substring With Exactly Two Distinct Characters
+Join Words To Make A Palindrome (palindrome pairs)
+Longest Repeated Substring
+Most repeated substring
+Generate Numeronyms
+Print Matrix In Spiral Order
+Reverse The Ordering Of Words In A String
+Move All Letters To Left Side With Minimizing Memory Writes
+Indices Of Words In Text String
+Minimum Window Substring
+Print A String Sinusoidally
+Boggle Solver
+Smallest number after removing k-digits
+Longest palindromic substring
+Find all anagrams of P in S
+Find all substrings with concatenation of all words
+Longest substring without repeating chars
+Longest substring with atmost 2 chars
+Find permutation of a string in another string
+
+Ad-Hoc:
+Diagonal traversal of a grid
+Shuffle of an Array
+K-V Store++
+Max Sum subarray
+3Sum 2 Sum
+Finding the missing element
+Find the duplicate element
+Retain Best Cache
+Majority Element in an array
+Maximum of subarrays of size k in size n array
+Array Product
+Merge Overlapping Intervals
+2D Array Search
+Area under histogram
+Pascal's Triangle
+Sum Zero
+Minimum Element In A Sorted And Rotated Array
+Hamming Weight
+Run Length Encoder
+Skyline
+Find The Next Palindromic Number
+Alternating Positives and Negatives
+Is It A Rotation Of A Palindrome?
+Detect Prime Numbers
+Divide An Integer By Another Integer
+
+
+System Design:
+1 Bottlenecks and Sharding
+2 DHT, Twitter, Map Reduce
+3 Throttling Infrastructure
+4 LRU Cache
+5 Billionth Car (Free Form) 
+6 Trending Topics (Free Form) 
+7 Design a Ride-Sharing service (Free Form) 
+8 News Feed (Free Form) 
+9 Time Series DB (Free Form) 
+10 Design a cache (single server) (Free Form) 
+11 * Design a Distributed cache (e.g. memcached) (Free Form) 
+12 URL Shortener (Free Form) 
+13 Chat (messenger) Server (Free Form) 
+14 Netflix Streaming (Free Form) 
+15 Photo Sharing (Free Form) 
+16 Twitter! (Free Form) 
+17 Recommendation System (Free Form) 
+18 Unique ID Generator (Free Form) 
+19 Design Request Counters (hit counters) (Free Form) 
+20 (e)Commerce Website (Free Form) 
+21 Recently Viewed Items (Free Form) 
+22 Social Gaming (Free Form) 
+23 Log Search (Free Form) 
+24 Design Google Maps (Free Form) 
+
+
+Object MOdelling:
+Parking lot design
+County Library system
+Elevator system
+General REST API thought-design guidelines (Free Form) Use RESTful URLs and actions
+File System (Free Form) 
+Tic Tac Toe (Free Form) 
+Deck of Cards (Free Form) 
+Musical Jukebox (Free Form) 
+Restaurant Reservation System (Free Form) 
+Chess (Free Form) 
+Remote Control Fan (Free Form) 
+Coffee Maker (Free Form) 
+Vending Machine (Free Form) 
+Black Jack (Free Form) 
+Air Traffic Control (Free Form) 
+
+Concurrency:
+1 Rate Limiter (Free Form) 
+2 Thread Pool (Free Form) 
+3 Odd Even (Free Form) 
+4 Dictionary (Free Form) 
+5 Request Dispatcher (Free Form) 
+6 Concurrent Hashmap (Free Form) 
+7 Timer (Free Form) 
+8 Bounded Hash Set (Free Form) 
+9 Lock Order Deadlock (Free Form) 
+10 Implement Thread Local Storage (Free Form) 
+11 Implement Fair Thread Scheduling (Free Form) 
+12 Implement a dispatch execution class with sub-system locks (Free Form) 
+13 Implement a connection pool (Free Form) 
+
+
+
+
+https://wwwlt.timetrade.com/app/lpsjcp/workflows/lpsjcp001/schedule/availability?wfsid=16a5bb66-baba97f6-16a5bc3b-baba97f6-00000004-nhj3nmha07nk07hlvgqcamv88kpa9air&locationId=LPSP148&appointmentTypeId=Sitting&fs=1
+https://www.jcpportraits.com/locations/37.330774%2C-121.787940_25?distance%5Bpostal_code%5D=95148&distance%5Bcountry%5D=us
+
+https://www.slideshare.net/Ericsson/ericsson-ssr8000-infographic
+https://duckduckgo.com/?q=ericsson+ssr+router&t=canonical&ia=web
+https://itpeernetwork.intel.com/inteldcisummit-connectivity/#gs.kq8xrn
+https://duckduckgo.com/?q=intel+cascade+glacier+cloud&t=canonical&ia=web
+https://www.linkedin.com/in/nickcam/
+
+
+https://www.youtube.com/watch?v=Cx4Y-T4LZt8&feature=youtu.be
+https://www.youtube.com/watch?v=i0sVbwFhPWs&feature=youtu.be
+
+

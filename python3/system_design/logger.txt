@@ -1,0 +1,78 @@
+Design a system to collect and aggregate statistics from multiple systems to be used for plotting monitoring graph or triggering alerts.
+
+function requirement:
+
+1. statistics for a given period, min granularity 1 sec
+2. different event ids
+3. period could be multi year.
+4. read latency should be minimal.
+
+Capacity:
+1. ~1B events/statistics
+2. write heavy (1M event/sec)
+3. read would be infrequent (1K/sec)
+
+
+high level design:
+
+1. register microserv
+2. logger us
+3. read_stats us
+4. aggregate us (??)
+5. alert us (??)
+
+
+1. register us
+system_id register(module_id, listof<event id>)
+
+2. logger us
+log_event(system_id, timestamp, event_id)
+
+table schema: logger_db
+- system_id, timestamp, event_id, count
+
+size: 20M events/sec
+each event: 20B
+total: 400M /aggregator cycle
+
+works like a cache and aggregator us will process this and keep in the final_db
+
+
+3. read_stats
+read_stats(system_id, event_id, duration)
+list of events and their count
+
+4. aggregator us
+
+table:
+final_db
+
+table schema:
+system_id, event_stamp, event_id, counter_value
+event_stamp: epoch value at which the entry was generated.
+
+per second stats: 
+1hr: 40K entries 
+1 day: 1.2M entries
+1 yrs: 5B entries
+10 yrs: 50B entries
+
+each entry: 8B id + 2B events + 8B counter ~20B
+1TBytes
+
+sharding key: system_id (client) + event_id
+data replication
+
+
+Triggering Alerts:
+
+1. define_alerts(system_id, event_id, threshold_low, threshold_high, duration)
+
+trigger_alert us:
+- notification from aggreagtor us (
+
+
+
+
+
+

@@ -8,7 +8,7 @@ def swap(l, i, j):
 def permute(l, i):
     if i == len(l)-1:
         #print(''.join(c for c in l))
-        print(l)
+        print("".join(l))
         return
 
     for j in range(i, len(l)):
@@ -18,7 +18,8 @@ def permute(l, i):
 
 def main():
     s="abcd"
-    l = [c for c in s]
+    #l = [c for c in s]
+    l = list(s)
     permute(l, 0)
 
 if __name__ == '__main__':

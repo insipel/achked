@@ -14,7 +14,7 @@ def nth_fib(n):
     return fib[n-1]
 
 def main():
-    n = 20
+    n = 30
     print(nth_fib(n))
 
 if __name__ == '__main__':

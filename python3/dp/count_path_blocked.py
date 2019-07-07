@@ -11,7 +11,8 @@ def count_path_blocked(grid):
             if grid[r][c] == 0:
                 res[r][c] = 0
             elif r == m-1 and c == n -1:
-                res[r][c] = 0 if grid[r][c] == 0 else 1
+                #res[r][c] = 0 if grid[r][c] == 0 else 1
+                res[r][c] = grid[r][c]
             else:
                 res[r][c] = res[r+1][c] + res[r][c+1]
 

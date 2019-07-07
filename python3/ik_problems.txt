@@ -1,0 +1,240 @@
+Ad-hoc
+1. 3sum, 2sum
+2. Find the missing element
+3. Duplicate number in range 0 to N - 1
+4. Array Product
+5. Merge Overlapping Intervals
+6. 2D Array Search
+7. Area Under Histogram
+8. Pascal's Triangle
+9. Sum Zero 
+10. Minimum Element In A Sorted And Rotated Array
+11. Hamming Weight
+12. Run Length Encoder
+13. Skyline
+14. Find The Next Palindromic Number
+15. Alternating Positives And Negatives 
+16. Is It A Rotation Of A Palindrome?
+17. Detect Prime Numbers
+18. Divide An Integer By Another Integer 
+19. Diagonal traversal of a grid (in DP section)
+20. Max sum subarray
+21. Shuffle of an Array
+22. K-V Store++
+23. Retain Best Cache
+24. Majority Element in an array
+25. Maximum of subarrays of size k in size n array
+
+
+DP: (Done)
+1. Levenshtein Distance (also called Edit Distance)
+2. Word Break
+3. Coin Play
+4. Knight's tour!
+5. Count ways to reach the N’th stair
+6. Robbery
+7. Minimum Coins 
+8. Cut The Rope
+9. Number of Paths in a Matrix
+10. Matrix Chain Multiplication
+11. Strings interleave
+12. Word Wrap
+13. Equal Sub Set Partition
+14. Longest Common Subsequence
+15. Largest Sub Square Matrix With All 1s
+16. Alternating coin play
+17. Strings Interleave
+18. Egg dropping puzzle
+19. Max Path with -ve numbers
+20. Trace max path solution
+21. Min coin change (regular, with idx)
+22. Trace min coin change solution
+23. Fibonacci numbers
+24. Knapsack problem
+25. Count path excluding 0s or blockades
+26. Count #ways to make coin sum
+27. Balanced Partition subarray
+28. Subsets counting upto K
+29. 2 partitions with minimum difference
+30. Longest Increasing subsequence
+31. Regex Matcher
+32. Shortest common supersequence
+
+
+
+
+Linked List:
+1. Longest Substring With Balanced Parentheses
+2. Maximum In Sliding Window
+3. Find The Middle Node In A Singly Linked List
+4. Implement a Min Stack
+5. Swap kth Nodes In Given Linked List
+6. Reverse Given Linked List In Groups Of k
+7. Design And Implement LRU Cache
+8. Zip Given Linked List From Ends 
+9. Add Two Numbers
+10. Clone Singly Linked List With Random Pointer
+11. Merge Sort A Linked List
+12. Valid Expression
+13. Skip Lists!
+14. Alternative Node Split 
+15. Find Intersection Of Two Singly Linked Lists
+16. Find Median Of Sorted Circular Singly Linked List
+17. Implement Queue Using Two Stacks 
+
+
+Graphs:
+1. Find Order Of Characters From Alien Dictionary
+2. Knight's Tour On A Chess Board
+3. String Transformation Using Given Dictionary Of Words
+4. Shortest Path In 2D Grid With Keys And Doors
+5. Zombie Clusters 
+6. Find Order Of Characters From Alien Dictionary
+7. Given A Graph, Build A New One With Reversed Edges 
+8. Indices Of Words In Text String
+9. Snakes and Ladders Matrix
+10. Detect cycle in Directed Graph
+11. Count Basins
+12. Longest Path In Weighted DAG
+13. Shortest Distance From The Guard 
+
+Trees:
+1. Print Level tree with q
+2. DFS manual stack
+3. BFS with Q
+4. Find 2 trees if they have similar inorder strings
+5. Implement tree iterator 
+6. Single Value Tree
+7. Is It A BST (range, DnC)
+8. PostOrder Traversal Without Recursion
+9. Print All Paths Of A Tree
+10. Convert A Binary Tree Into A Circular Doubly Linked List
+11. Least Common Ancestor (LCA)
+12. Merge Two BSTs
+13. Upside Down 
+14. Kth Smallest Element Of BST
+15. Balanced BST From A Sorted Array
+16. Height Of K-Ary Tree 
+17. Clone A Binary Tree
+18. Mirror Image Of Binary Tree
+19. Populate Sibling Pointers
+20. Largest BST
+21. Construct Binary Tree
+22. Tree Iterator 
+23. Find Kth small element in BST (iterative)
+24. Find Kth small element in BST (recursive)
+25. Find kth small with order statistics
+26. Find rank of a node/root
+27. Kth largetst (recursive, iterative)
+28. 2nd largest in a segment tree
+29. Tree diameter
+30. BST to DLL
+31. Delete a node from the BST
+32. Upside down
+33. Print all paths
+34. Iterative inorder, preorder and postorder
+35. Tree creation with In and Post order
+36. Tree creation with Pre and Post order
+
+Recursion:
+1. Generate All Possible Expressions That Evaluate To The Given Target Value
+2. Palindromic Decomposition Of A String
+3. Generate All Subsets Of A Set
+4. n Queen Problem
+5. Test Cases Updated
+6. How Many Binary Search Trees With n Nodes? 
+7. Possible To Achieve Target Sum?
+8. Find All Well Formed Brackets 
+9. Tower Of Hanoi
+10. Diameter of a tree
+11. Strings From Wild Card
+12. Power 
+
+Sorting:
+1. Nuts and Bolts!
+2. Merge K sorted arrays
+3. Group the numbers
+4. Top K
+5. 3 Sum
+6. Lexicographical Order 
+7. Dutch National Flag
+8. Merge First Sorted Array Into Second Sorted Array
+9. Nearest Neighbor
+10. Implement Merge Sort
+11. Sort All Characters
+12. Find an integer not among four billion given ones 
+
+Strings:
+1. Regex Matcher
+2. KMP
+3. Longest Substring With Exactly Two Distinct Characters
+4. Join Words To Make A Palindrome
+5. Longest Repeated Substring
+6. Generate Numeronyms 
+7. Print Matrix In Spiral Order
+8. Reverse The Ordering Of Words In A String
+9. Move All Letters To Left Side With Minimizing Memory Writes 
+10. Indices Of Words In Text String
+11. Minimum Window Substring (Controlling Set Problem)
+12. Print A String Sinusoidally
+13. Boggle Solver 
+14. Longest Palindromic Substring
+15. Find all anagrams of P in S
+16. Find all substrings with concatenation of all words
+17. Longest substring without repeating characters
+18. Longest substring with atmost 2 characters
+19. Permuation of a string in another string
+
+Scalable Systems:
+1. Billionth Car (Free Form)
+2. Trending Topics (Free Form)
+3. Design a Ride-Sharing service (Free Form)
+4. News Feed (Free Form)
+5. Time Series DB (Free Form)
+6. Design a cache (single server) (Free Form)
+7. Design a Distributed cache (e.g. memcached) (Free Form)
+8. URL Shortener (Free Form)
+9. Chat (messenger) Server (Free Form)
+10. Netflix Streaming (Free Form)
+11. Photo Sharing (Free Form)
+12. Twitter! (Free Form)
+13. Recommendation System (Free Form)
+14. Unique ID Generator (Free Form)
+15. Design Request Counters (hit counters) (Free Form)
+16. (e)Commerce Website (Free Form)
+17. Recently Viewed Items (Free Form)
+18. Social Gaming (Free Form)
+19. Log Search (Free Form)
+20. Design Google Maps (Free Form)
+
+Concurrency:
+1. Rate Limiter (Free Form)
+2. Thread Pool (Free Form)
+3. Odd Even (Free Form)
+4. Dictionary (Free Form)
+5. Read Write Map (Free Form) 
+6. Request Dispatcher (Free Form)
+7. Concurrent Hashmap (Free Form)
+8. Timer (Free Form)
+9. Bounded Hash Set (Free Form)
+10. Lock Order Deadlock (Free Form)
+11. Implement Thread Local Storage (Free Form)
+12. Implement Fair Thread Scheduling (Free Form)
+13. Implement a dispatch execution class with sub-system locks (Free Form)
+14. Implement a connection pool (Free Form) 
+
+Object Modelling:
+1. General REST API thought-design guidelines (Free Form)
+2. File System (Free Form)
+3. Tic Tac Toe (Free Form)
+4. Deck of Cards (Free Form)
+5. Musical Jukebox (Free Form)
+6. Restaurant Reservation System (Free Form)
+7. Chess (Free Form)
+8. Remote Control Fan (Free Form)
+9. Coffee Maker (Free Form)
+10. Vending Machine (Free Form)
+11. Black Jack (Free Form)
+12. Air Traffic Control (Free Form) 
+
+

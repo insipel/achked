@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """
 Given an array of n elements, where each element is at most k positions away from its target position, write an algorithm that sorts in O(n log k) time
 
@@ -6,7 +8,6 @@ Output : arr[] = {2, 3, 5, 6, 8, 9, 10}
 
 Input : arr[] = {10, 9, 8, 7, 4, 70, 60, 50}, k = 4
 Output : arr[] = {4, 7, 8, 9, 10, 50, 60, 70}
-"""
 
 import
 
@@ -38,51 +39,16 @@ def ksort(l, k):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-"""
 Write a simple regex verifier. The regex patterns to match are a-z . * 
 Where <dot> stands for any character, and 
 <star> means the previous  single character 0 or more times. 
 
 The regex must match the entire string, not a substring
-"""
 
 input: abaac, abac
 pattern: ab*c, a.a*c, .*, .*c, .*d
-    
+"""
+
 def regex_matcher(input, pat, i, pidx):
     # i could end, and pidx is at the end: success
     if i == len(input) and pidx == len(pat):
@@ -115,3 +81,12 @@ def regex_matcher(input, pat, i, pidx):
         return False
     
         
+#s = "aabcb"
+#p = "aa*.b"
+#input: abaac, abac
+#pattern: ab*c, a.a*c, .*, .*c, .*d
+s="abaac"
+#p = "ab*c"
+#p = "a.a*c"
+p = "a.b*.a*c"
+print(regex_matcher(s, p, 0, 0))
