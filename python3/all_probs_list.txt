@@ -206,7 +206,7 @@ Longest substring without repeating chars
 Longest substring with atmost 2 chars
 Find permutation of a string in another string
 
-Ad-Hoc:
+Ad-Hoc/Adhoc:
 Diagonal traversal of a grid
 Shuffle of an Array
 K-V Store++

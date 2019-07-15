@@ -8,6 +8,10 @@ def getMergedIntervals(a1):
     #
     #a = sorted(a1, key=itemgetter(0))
     a = sorted(a1, key=lambda x: x[0])
+
+    #print(a1)
+    #a1.sort(key=lambda x: x[0])
+    #a = a1
     #print(a)
     st, end = a[0]
     op = []

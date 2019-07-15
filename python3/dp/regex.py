@@ -33,7 +33,8 @@ def regex_dp_class_brief(s, p):
                     res[i][j] = res[i+1][j+1]
                 elif p[j] == '*':
                     res[i][j] = res[i+1][j] or res[i][j+1]
-                elif s[i] != p[j] '''Note here''' and (j+1) < plen and p[j+1] == '*':
+                #elif s[i] != p[j] '''Note here''' and (j+1) < plen and p[j+1] == '*':
+                elif s[i] != p[j] and (j+1) < plen and p[j+1] == '*':
                     res[i][j] = res[i][j+2]
                 elif s[i] != p[j]: # Note here
                     res[i][j] = False

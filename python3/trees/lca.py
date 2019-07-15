@@ -85,6 +85,28 @@ def find_lca2(root, n1, n2):
 
     return left_node if left_node else right_node
 
+def find_lca_3(root, n1, n2, l):
+    if not root:
+        return None
+
+    if n1 == root.data:
+        l[0] = root
+
+    if n2 == root.data:
+        l[1] = root
+
+    find_lca_3(root.left, n1, n2, l)
+    find_lca_3(root.right, n1, n2, l)
+
+    if not l[0] and not l[1]:
+        return None
+
+    if l[0] and l[1]:
+        l[2] = root
+        return root
+
+    return l[0] if l[0] else l[1]
+
 def find_lca2_error_chk(root, n1, n2, found_list):
     if not root:
         return None
@@ -121,13 +143,18 @@ def main():
     #root.right.right = Node(2)
 
     print_level_tree(root)
+    #n1 = 6
+    #n2 = 20
     n1 = 6
-    n2 = 20
+    n2 = 10
 
     #print("LCA of ", n1, " and ", n2, " is ", find_lca1(root, n1, n2))
 
     #lca = find_lca2(root, n1, n2)
-    #print("LCA of ", n1, " and ", n2, " is ", lca.data)
+    l = [None, None, None]
+    lca = find_lca_3(root, n1, n2, l)
+    print(l, l[2].data)
+    print("LCA of ", n1, " and ", n2, " is ", lca.data if lca else None)
 
     found_list = [False] * 2
     lca = find_lca2_error_chk(root, n1, n2, found_list)

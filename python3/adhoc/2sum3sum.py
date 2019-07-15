@@ -112,14 +112,14 @@ def find_3sum_orig(a, target):
 
 def main():
     print("Running 2 sum problem")
-    a = [2, 1, 3, 4, 5]
+    a = [5, 2, 1, 3, 4]
     k = 10
     #find_2sum_orig(a, k)
     #find_2sum_set(a, k)
     #find_2sum_sorted(a, k)
 
     #find_3sum_orig(a,k)
-    #find_3sum_set(a,k)
+    find_3sum_set(a,k)
     find_3sum_sorted(a,k)
 
 main()

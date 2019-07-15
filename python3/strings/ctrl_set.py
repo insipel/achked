@@ -38,7 +38,8 @@ def ctrl_set(s, p):
 def main():
     #s = "animeshlonesh"
     #p = "nes"
-    s = "animeisimmsshlonesh"
+    #s = "animeisimmsshlonesh"
+    s = "animeisiimmsshloneshiims"
     p = "ims"
     print("String:", s)
     print("Pattern:", p)

@@ -2,6 +2,16 @@
 
 import random
 
+def mssa_dp1(a):
+    n = len(a)
+    s = [1] * n
+    s[0] = max(a[0], 0)
+    for  i in range(1, n):
+        s[i] = max (s[i-1] + a[i], a[i], 0)
+
+    print(s)
+    return s[n-1]
+
 def mssa_dp(a):
     n = len(a)
     s = [1] * n
@@ -129,10 +139,10 @@ def mssa_bf(a):
 def main():
     print("testing max sum subarray")
 
-    #a = [-14, 20, -3, 4, -10]
+    a = [-14, 20, -3, 4, -10]
     #a = [-3, 2, 1, -4, 5]
     #a = [1, -3, 5]
-    a = [-3, 5]
+    #a = [-3, 5]
     print(a)
 
     #BF:1
@@ -147,13 +157,17 @@ def main():
     #print("max sum (rec1):", arrsum)
 
     #App:5
-    arrsum, st, end = mssa_rec_dnc(a, 0, len(a) - 1)
-    print("st:", st, ", end:", end)
-    print("max sum (rec_dnc):", arrsum, a[st:end+1])
+    #arrsum, st, end = mssa_rec_dnc(a, 0, len(a) - 1)
+    #print("st:", st, ", end:", end)
+    #print("max sum (rec_dnc):", arrsum, a[st:end+1])
 
     #App:4 DP way, Kadane's
-    #arrsum = mssa_dp(a)
-    #print("max sum (DP):", arrsum)
+    arrsum = mssa_dp(a)
+    print("max sum (DP):", arrsum)
+
+    #App:5 DP way, Kadane's
+    arrsum = mssa_dp1(a)
+    print("max sum (DP):", arrsum)
 
 main()
 

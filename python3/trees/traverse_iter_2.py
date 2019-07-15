@@ -39,6 +39,30 @@ def post_iter(root):
 
     print()
 
+def post_iter2(root):
+    st = []
+    node = root
+
+    pushleft(node, st)
+
+    while st:
+        node = st.pop(-1)
+        nxt_node = st[-1] if st else None
+
+        #if not node.right and not node.left:
+        if node.right == nxt_node:
+            # Switch the order of node and its right to indicate that
+            # the right node has been processed. Right node will be
+            # pushed in the pushleft() routine.
+            st.pop(-1)
+            st.append(node)
+            pushleft(nxt_node, st)
+        else:
+            # here, the node with only left child will be processed.
+            print(node.data, end = ' ')
+
+    print()
+
 def pre_order(root):
     node = root
     st = []
@@ -78,6 +102,8 @@ def main():
     print_level_tree(root)
     print("Postorder traversal: ", end = '')
     post_iter(root)
+    print("Postorder traversal2: ", end = '')
+    post_iter2(root)
     print("Preorder traversal:  ", end = '')
     pre_order(root)
     print("Inorder traversal:  ", end = '')

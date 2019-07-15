@@ -1,0 +1,161 @@
+FB:
+1. 1	Two Sum    44.3%	Easy	
+2. 146	LRU Cache    26.1%	Medium	
+3. 973	K Closest Points to Origin    62.0%	Medium	
+4. 200	Number of Islands    42.0%	Medium	
+5. 15	3Sum    24.3%	Medium	
+6. 56	Merge Intervals    35.9%	Medium	
+7. 273	Integer to English Words    24.5%	Hard	
+8. 23	Merge k Sorted Lists    35.0%	Hard	
+9. 20	Valid Parentheses    36.8%	Easy	
+10. 206	Reverse Linked List    55.4%	Easy	
+11. 253	Meeting Rooms II    43.1%	Medium	
+12. 301	Remove Invalid Parentheses    39.6%	Hard	
+13. 121	Best Time to Buy and Sell Stock    47.6%	Easy	
+14. 238	Product of Array Except Self    55.5%	Medium	
+15. 297	Serialize and Deserialize Binary Tree    41.5%	Hard	
+16. 76	Minimum Window Substring    31.2%	Hard	
+17. 33	Search in Rotated Sorted Array    33.0%	Medium	
+18. 79	Word Search    31.6%	Medium	
+19. 49	Group Anagrams    47.6%	Medium	
+20. 10	Regular Expression Matching    25.4%	Hard	
+21. 13	Roman to Integer    52.7%	Easy	
+22. 215	Kth Largest Element in an Array    48.5%	Medium	
+23. 17	Letter Combinations of a Phone Number    42.0%	Medium	
+24. 88	Merge Sorted Array    36.1%	Easy	
+25. 394	Decode String    45.3%	Medium	
+26. 139	Word Break    35.7%	Medium	
+27. 85	Maximal Rectangle    33.7%	Hard	
+28. 67	Add Binary    39.6%	Easy	
+29. 25	Reverse Nodes in k-Group    36.9%	Hard	
+30. 621	Task Scheduler    45.8%	Medium	
+31. 283	Move Zeroes    54.6%	Easy	
+32. 341	Flatten Nested List Iterator    48.3%	Medium	
+33. 218	The Skyline Problem    31.9%	Hard	
+34. 236	Lowest Common Ancestor of a Binary Tree    38.0%	Medium	
+35. 78	Subsets    53.6%	Medium	
+36. 50	Pow(x, n)    28.2%	Medium	
+37. 535	Encode and Decode TinyURL    77.0%	Medium	
+38. 43	Multiply Strings    31.0%	Medium	
+39. 173	Binary Search Tree Iterator     49.2%	Medium	
+40. 128	Longest Consecutive Sequence    42.0%	Hard	
+41. 234	Palindrome Linked List    36.4%	Easy	
+42. 268	Missing Number    48.7%	Easy	
+43. 102	Binary Tree Level Order Traversal    49.1%	Medium	
+44. 38	Count and Say    40.9%	Easy	
+45. 647	Palindromic Substrings    57.3%	Medium	
+46. 69	Sqrt(x)    31.6%	Easy	
+47. 28	Implement strStr()    32.3%	Easy	
+48. 26	Remove Duplicates from Sorted Array    41.1%	Easy	
+49. 235	Lowest Common Ancestor of a Binary Search Tree    45.2%	Easy	
+50. 461	Hamming Distance    70.5%	Easy
+
+
+
+Google:
+1. 975	Odd Even Jump 47.2%	Hard	
+2. 1	Two Sum 44.3%	Easy	
+3. 410	Split Array Largest Sum 42.6%	Hard	
+4. 929	Unique Email Addresses 70.3%	Easy	
+5. 222	Count Complete Tree Nodes 34.7%	Medium	
+6. 482	License Key Formatting 41.1%	Easy	
+7. 489	Robot Room Cleaner 65.0%	Hard	
+8. 843	Guess the Word 43.8%	Hard	
+9. 904	Fruit Into Baskets 41.6%	Medium	
+10. 947	Most Stones Removed with Same Row or Column 54.3%	Medium	
+11. 753	Cracking the Safe 46.7%	Hard	
+12. 158	Read N Characters Given Read4 II - Call multiple times 26.8%	Hard	
+13. 844	Backspace String Compare 46.2%	Easy	
+14. 1057	Campus Bikes 59.7%	Medium	
+15. 399	Evaluate Division 47.9%	Medium	
+16. 731	My Calendar II 45.0%	Medium	
+17. 809	Expressive Words 43.8%	Medium	
+18. 359	Logger Rate Limiter 65.5%	Easy	
+19. 527	Word Abbreviation 50.4%	Hard	
+20. 2	Add Two Numbers 31.4%	Medium	
+21. 253	Meeting Rooms II 43.1%	Medium	
+22. 939	Minimum Area Rectangle 50.8%	Medium	
+23. 736	Parse Lisp Expression 44.3%	Hard	
+24. 913	Cat and Mouse 28.8%	Hard	
+25. 42	Trapping Rain Water 43.7%	Hard	
+26. 4	Median of Two Sorted Arrays 26.7%	Hard	
+27. 833	Find And Replace in String 46.7%	Medium	
+28. 642	Design Search Autocomplete System 38.4%	Hard	
+29. 308	Range Sum Query 2D - Mutable 32.3%	Hard	
+30. 246	Strobogrammatic Number 42.5%	Easy	
+31. 394	Decode String 45.3%	Medium	
+32. 524	Longest Word in Dictionary through Deleting 46.0%	Medium	
+33. 56	Merge Intervals 36.0%	Medium	
+34. 200	Number of Islands 42.0%	Medium	
+35. 837	New 21 Game 31.8%	Medium	
+36. 163	Missing Ranges 23.3%	Medium	
+37. 767	Reorganize String 42.9%	Medium	
+38. 248	Strobogrammatic Number III 36.8%	Hard	
+39. 943	Find the Shortest Superstring 38.6%	Hard	
+40. 857	Minimum Cost to Hire K Workers 47.7%	Hard	
+41. 353	Design Snake Game 30.8%	Medium	
+42. 616	Add Bold Tag in String 39.4%	Medium	
+43. 788	Rotated Digits 54.5%	Easy	
+44. 777	Swap Adjacent in LR String 33.4%	Medium	
+45. 743	Network Delay Time 42.6%	Medium	
+46. 57	Insert Interval 31.4%	Hard	
+47. 329	Longest Increasing Path in a Matrix 40.4%	Hard	
+48. 849	Maximize Distance to Closest Person 41.0%	Easy	
+49. 734	Sentence Similarity 40.8%	Easy	
+50. 1055	Shortest Way to Form String 58.6%	Medium	
+51. 981	Time Based Key-Value Store 50.9%	Medium	
+
+
+Amazon:
+1. 973	K Closest Points to Origin 62.0%	Medium	
+2. 937	Reorder Log Files 56.6%	Easy	
+3. 1	Two Sum 44.3%	Easy	
+4. 5	Longest Palindromic Substring 27.5%	Medium	
+5. 819	Most Common Word 42.3%	Easy	
+6. 200	Number of Islands 42.0%	Medium	
+7. 146	LRU Cache 26.1%	Medium	
+8. 763	Partition Labels 71.0%	Medium	
+9. 957	Prison Cells After N Days 38.3%	Medium	
+10. 138	Copy List with Random Pointer 27.7%	Medium	
+11. 103	Binary Tree Zigzag Level Order Traversal 42.3%	Medium	
+12. 295	Find Median from Data Stream 37.3%	Hard	
+13. 42	Trapping Rain Water 43.7%	Hard	
+14. 23	Merge k Sorted Lists 35.0%	Hard	
+15. 909	Snakes and Ladders 34.1%	Medium	
+16. 2	Add Two Numbers 31.4%	Medium	
+17. 675	Cut Off Trees for Golf Event 30.8%	Hard	
+18. 139	Word Break 35.8%	Medium	
+19. 642	Design Search Autocomplete System 38.4%	Hard	
+20. 207	Course Schedule 38.3%	Medium	
+21. 545	Boundary of Binary Tree 35.3%	Medium	
+22. 1000	Minimum Cost to Merge Stones 32.5%	Hard	
+23. 297	Serialize and Deserialize Binary Tree 41.5%	Hard	
+24. 269	Alien Dictionary 31.4%	Hard	
+25. 505	The Maze II 44.3%	Medium	
+26. 127	Word Ladder 24.5%	Medium	
+27. 165	Compare Version Numbers 23.9%	Medium	
+28. 253	Meeting Rooms II 43.1%	Medium	
+29. 348	Design Tic-Tac-Toe 50.1%	Medium	
+30. 472	Concatenated Words 35.4%	Hard	
+31. 212	Word Search II 29.1%	Hard	
+32. 126	Word Ladder II 18.1%	Hard	
+33. 124	Binary Tree Maximum Path Sum 30.3%	Hard	
+34. 273	Integer to English Words 24.5%	Hard	
+35. 772	Basic Calculator III 42.9%	Hard	
+36. 15	3Sum 24.3%	Medium	
+37. 21	Merge Two Sorted Lists 47.9%	Easy	
+38. 733	Flood Fill 51.2%	Easy	
+39. 340	Longest Substring with At Most K Distinct Characters 40.1%	Hard	
+40. 4	Median of Two Sorted Arrays 26.7%	Hard	
+41. 121	Best Time to Buy and Sell Stock 47.6%	Easy	
+42. 895	Maximum Frequency Stack 56.7%	Hard	
+43. 79	Word Search 31.6%	Medium	
+44. 49	Group Anagrams 47.7%	Medium	
+45. 155	Min Stack 37.6%	Easy	
+46. 45	Jump Game II 28.3%	Hard	
+47. 863	All Nodes Distance K in Binary Tree 48.2%	Medium	
+48. 56	Merge Intervals 36.0%	Medium	
+49. 206	Reverse Linked List 55.5%	Easy	
+50. 314	Binary Tree Vertical Order Traversal 41.2%	Medium	
+51. 588	Design In-Memory File System 40.3%	Hard	
+
