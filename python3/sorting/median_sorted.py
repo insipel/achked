@@ -4,8 +4,8 @@ def find_median(l1, l2):
     len1 = len(l1)
     len2 = len(l2)
 
-    if len1 > len2:
-        return find_median(l2, l1)
+    #if len1 > len2:
+    #    return find_median(l2, l1)
 
     st = 0
     end = len1

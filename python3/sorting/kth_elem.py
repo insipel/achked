@@ -31,6 +31,7 @@ def kth_rank_quickSelect(l, k):
     j = -1
 
     while j != k:
+    #while st <= end: # This works too
         j = partition(l, st, end)
 
         if j < k:
@@ -52,7 +53,7 @@ def kth_rank_2(l, k):
 
 def main():
     l = [ 4, 19, 6, 14, 29, 8, 12, 23]
-    k = 1
+    k = 20
     #print("build_heap method:", kth_rank_2(l, k))
     print("quick_select method:", kth_rank_quickSelect(l, k - 1))
 

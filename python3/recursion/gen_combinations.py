@@ -7,6 +7,7 @@ def comb(l, res, lidx, k):
 
     for i in range(lidx, len(l)):
         res.append(l[i])
+        #print(res, k)
         comb(l, res, i+1, k-1)
         res.pop()
 

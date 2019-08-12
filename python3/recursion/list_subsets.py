@@ -8,7 +8,8 @@ def list_subsets(s, i, l):
     list_subsets(s, i+1, l)
     l.append(s[i])
     list_subsets(s, i+1, l)
-    l.remove(s[i])
+    #l.remove(s[i])
+    l.pop()
 
 def main():
     s = 'abc'

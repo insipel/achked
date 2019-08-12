@@ -13,6 +13,8 @@ def dnf(a):
     j = st
     k = end
 
+#    i       j            k
+#Gs...| Bs... | ...??... | Rs ...
     while j < k:
         if a[j] == 'R':
             k = k - 1

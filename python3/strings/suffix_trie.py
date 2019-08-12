@@ -20,8 +20,9 @@ def insert_trie(node, word, i):
     node.end_of_word = True
 
 def build_suffix(word):
-    root = TrieNode()
-    trie = Trie(root)
+    #root = TrieNode()
+    trie = Trie(TrieNode())
+    root = trie.root
 
     for i in range(len(word) - 1, -1, -1):
         insert_trie(root, word, i)

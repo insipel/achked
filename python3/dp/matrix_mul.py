@@ -8,6 +8,7 @@ def matrix_mul(m):
 
     for group_sz in range(2, n+1):
         for i in range(n - group_sz + 1):
+            # Value of j: explanation @Pg150 in *good* book
             j = i + group_sz - 1
 
             res[i][j] = float('inf')

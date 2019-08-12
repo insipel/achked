@@ -76,6 +76,15 @@ def print_bld(l):
 points = [(2, 9, 10), (3, 7, 15), (5, 12, 12), (15, 20, 10), (19, 24, 8)]
 #points = [(2, 9, 10)]
 
+#p1 = []
+#for x, y, ht in points:
+#    p1.append(Bld_point(x, 1, ht))
+#    p1.append(Bld_point(y, 0, ht))
+#
+#p1 = sorted(p1)
+#print_bld(p1)
+#exit()
+
 l = []
 for x, y, ht in points:
     heappush(l, Bld_point(x, 1, ht))
@@ -129,8 +138,10 @@ def remove_height(ht):
         max_pq.pop(-1)
         #print("removing ht:", ht, ", max_pq:", print_list(max_pq))
         heapify(max_pq)
+
         ht_count_map.pop(ht)
         ht_count_map[-last_entry[0]] = entry
+
         #print("ht_count_map:", ht_count_map)
         return
 

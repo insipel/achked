@@ -6,7 +6,7 @@ def find_brackets(n, l, r, s):
         print(''.join(c for c in s))
         return
 
-    if l<=n:
+    if l<n:
         s.append('(')
         find_brackets(n, l+1, r, s)
         s.pop()

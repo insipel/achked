@@ -1,0 +1,57 @@
+Box interview questions:
+* 1. elevator controller. Big picture and scheduling algorithm
+* 2. Design caching system on whiteboard.
+* 3. Design inmemorydb with code.
+6. Filesystem design
+13. question about locking/caching.
+* 14. Tell me about your worst project you have done and how to improve it?
+21. Ratelimiting algo
+
+DP:
+* 16. Word justification
+* 17. Phone number of given length with Knight's move on telephone keypad
+
+Sum zero:
+4. Given an array of numbers with +ve and -ve, find pairs that sum to zero  
+5. Above question, but now finding 3 numbers which sums to zero.   
+
+15. 2sum/3sum
+
+Duplicate number detection:
+* 8. Remove all duplicates in linear time
+* 18. Find duplicate numbers
+
+Ad-Hoc
+7.  Solve is-X-prime at high-scale.
+* 9. RLE Encoding
+10. Given an integer of a certain bit length, does it have an even or
+    odd number of parity bits?
+12. given a dictionary and a word, find all words part of the english
+    language that are anagrams.
+
+Trees:
+19. Unival trees
+22. Longest BST in a binary tree
+11.  When would you use a binary search tree over a hash table?
+
+
+Identify where potential race conditions can happen in this hardware & database configuration:
+
+1) validate that folder Z already exists in cache or in the db
+2) invalidate cache data for Z
+3) INSERT file 'c' into folder Z
+4) gather folder Z + children
+5) update cache with new information about folder Z
+
+hardware set-up would be as follows:
+
+                         --- cache machine 1
+                      // --------------------------- \\
+outside world -- --- cache machine 2 --- database
+                      \\ --------------------------- //
+                         --- cache machine 3
+
+While any machine might be asked about files within folder Z, the
+actual data of folder Z will be cached on exactly 1 machine out of any
+of the machines that have cache data.
+

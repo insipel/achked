@@ -6,6 +6,7 @@ def power(base, exp):
     orig_exp = exp
 
     while exp:
+        print(base, exp, res)
         if exp & 1:
             res = res * base
         base *= base
@@ -13,5 +14,5 @@ def power(base, exp):
 
     print("Power(", orig_base,",",orig_exp,"):", res)
 
-power(3, 5)
+power(3, 7)
 

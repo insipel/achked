@@ -25,8 +25,11 @@ def generate_all_expressions(num, target):
             return
 
         for i in range(idx, len(num)):
-            # For an input like 1234, depending on idx, curr will be 1, 12, 123, 1234; 2 23 234; 3 34; 4 (all
-            #   possible splits)
+            # For an input like 1234, depending on idx, curr will be
+            # 1, 12, 123, 1234; 2 23 234; 3 34; 4 (all possible splits)
+            # Note that only 1, 12, 123 and 1234 will be considered
+            # for the case when 'idx == 0' is true.
+
             # This takes care of the concat case as concat has most precedence
             curr = num[idx:i+1]
             curr_int = int(curr)

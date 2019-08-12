@@ -36,7 +36,7 @@ def ctrl_set(s, p):
     return cur_size + 1, min_st, min_end
 
 def main():
-    #s = "animeshlonesh"
+    #s = "aniemshlonesh"
     #p = "nes"
     #s = "animeisimmsshlonesh"
     s = "animeisiimmsshloneshiims"

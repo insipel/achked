@@ -17,7 +17,7 @@ def permute(l, i):
         swap(l, i, j)
 
 def main():
-    s="abcd"
+    s="abc"
     #l = [c for c in s]
     l = list(s)
     permute(l, 0)

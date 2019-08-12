@@ -1,42 +1,53 @@
 #!/usr/bin/env python3
 
 def smallest_number_after_removing_k_digits(number, k):
+
     #Get the number in array format
     numbers = [int(x) for x in str(number)]
+
     #Guards
     if len(numbers) <= k: # AP: change here to =
         return -1
     if k == 0:
         return number
+
     #Handle an edge case here. If numbers are in
     #strictly increasing order, just drop last k
     if numbers == sorted(numbers):
         return int(''.join([str(x) for x in numbers[:len(numbers)-k]]))    
    
     #Set the window to be k+1 in size
-    left_idx, right_idx = 0, k + 1
+    left_idx, right_idx = 0, k
+
     #Move the window till end of the string
     while right_idx < len(numbers) + 1:
+
         window = numbers[left_idx : right_idx]
+
         #Find the position of the smallest number
         #If there are dupes, find the leftmost
         smallest_idx = window.index(min(window))
+
         #Drop all numbers to the left of the smallest
         numbers = numbers[:left_idx] + numbers[left_idx + smallest_idx:]
+
         #But, if the smallest index is the very first, the window still needs to move
         if smallest_idx == 0:
             left_idx += 1
             right_idx += 1
         #Now calculate how much right has to go fwd, to maintain window size
         else:
-            diff = (k + 1) - len(window)
+            #diff = (k + 1) - len(window)
+            diff = (smallest_idx - left_idx)
             right_idx += diff
             left_idx = left_idx + smallest_idx
  
-    print(numbers)
+    print(numbers, left_idx, right_idx)
     return  int(''.join([str(x) for x in numbers]))
 
-smallest_number_after_removing_k_digits(312, 3)
+num = 31243819
+window = 3
+print(smallest_number_after_removing_k_digits(num, window))
 
 def remove_digits(s, st, n, res):
     print("s:", s, ", st:", st, ", n:", n, ", res", res)
@@ -62,8 +73,8 @@ def remove_digits(s, st, n, res):
     res.append(s[min_idx])
     remove_digits(s, min_idx+1, n, res)
 
-#res = []
-#remove_digits("12345", 0, 2, res)
+res = []
+#remove_digits(str(num), 0, window-1, res)
 #print(res)
 
 
@@ -125,3 +136,6 @@ def remove_k_digits(n, k):
 
     return num
 
+num = 31243819
+window = 3
+#print(remove_k_digits(str(num), window))

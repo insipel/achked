@@ -69,7 +69,8 @@ def collect_words(node, word, all_words):
     for c in node.children:
         word.append(c)
         collect_words(node.children[c], word, all_words)
-        word.pop(-1)
+        #word.pop(-1)
+        word.pop()
 
 def prefix_check(trie, word):
     node = get_last_node(trie.root, word)
@@ -95,7 +96,7 @@ def main():
     print("list of words:", dfs(trie))
 
     print("++ Prefix match and collect matches ++")
-    word = 'cald'
+    word = 'cal'
     print("list of words:", prefix_check(trie, word))
 
 if __name__ == '__main__':

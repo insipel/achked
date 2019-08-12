@@ -1,16 +1,32 @@
 - Tell me about how you worked effectively under pressure.
 What They Want to Know: If you’re being considered for a high-stress job, the interviewer will want to know how well you can work under pressure. Give a real example of how you’ve dealt with pressure when you respond.
+- IPv4 delivery in absence of tech lead. Identify bottlenecks and ask for
+  help.
 
 - How do you handle a challenge? Give an example.
 What They Want to Know: Regardless of your job, things may go wrong and it won’t always be business as usual. With this type of question, the hiring manager wants to know how you will react in a difficult situation. Focus on how you resolved a challenging situation when you respond.
+- Ratelimiting infra design.
 
 - Have you ever made a mistake? How did you handle it? 
 What They Want to Know: Nobody is perfect, and we all make mistakes. The interviewer is more interested in how you handled it when you made an error, rather than in the fact that it happened.
+- context infra delivery. Prioritization was incorrect. TO course correct,
+  when I realized that it was not very high on the deliverable list, I reused
+    some of its components into other higher priority deliverables. But the
+    real learning was always always take the priority of the task, how important
+    it is to other teams and how important it is for delivery of the product.
 
 - Give an example of how you set goals. 
     What They Want to Know: With this question, the interviewer wants to know how
     well you plan and set goals for what you want to accomplish. The easiest way
     to respond is to share examples of successful goal setting.
+- Technical and personal goal setting.
+- I first lay out the assumptions in the requirement, remove ambiguities and
+  break down the tasks to 2-3 weeks level. There is background work involved
+    here that i need to have a low level design of the product in the back of my
+    mind. and then come up with the concrete actionable goals.
+- On Personal front. I set a goal myself for getting a raise in 2 years. I
+  discussed with my manager what does it need to demonstrate for me to go up
+    the ladder. and worked accordingly.
 
 - Give an example of a goal you reached and tell me how you achieved it.
         What They Want to Know: The hiring manager is interested in learning
@@ -42,3 +58,11 @@ What They Want to Know: Nobody is perfect, and we all make mistakes. The intervi
 
 - What is your most career important accomplishment? Why?
 
+
+- Explain a project that you find most interesting.
+1. Cloud connection plaform.
+    - Ambiguous requirement. What part do they want to split into different
+      service. What interface they like to use from integration point of view?
+    - Scaling. Coming up with WQPS of 30K entries/sec from 300 entries/sec was
+      very challenging.
+    - Novel scheme to tie up 2 flows into the connection.

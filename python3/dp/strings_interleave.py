@@ -20,7 +20,8 @@ def string_interleave(s1, s2, s3):
 
             if i > 0 and j > 0 and s1[i - 1] == s2[j - 1]  and s1[i - 1] == s3[i + j - 1]:
 
-                res[i][j] = res[i - 1][j] or res[i][j - 1]
+                #res[i][j] = res[i - 1][j] or res[i][j - 1]
+                res[i][j] = res[i - 1][j - 1]
             elif i > 0 and s1[i - 1] == s3[i + j - 1]:
                 res[i][j] = res[i - 1][j]
             elif j > 0 and s2[j - 1] == s3[i + j - 1]:

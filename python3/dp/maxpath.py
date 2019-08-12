@@ -9,7 +9,8 @@ def maxpath_dp(grid):
     for i in range(m-1, -1, -1):
         for j in range(n-1, -1, -1):
             max_val = max(res[i+1][j], res[i][j+1])
-            if max_val == float('-inf'):
+            #if max_val == float('-inf'):
+            if i == m - 1 and j == n - 1: # This is better in line with RR
                 res[i][j] = grid[i][j]
             else:
                 res[i][j] = grid[i][j] + max_val
@@ -44,6 +45,8 @@ def main():
     res = maxpath_dp(grid)
     #print(res)
     print(res[0][0])
+    for i in range(len(res)):
+        print(res[i])
     print_maxpath(grid, res)
 
 if __name__ == '__main__':
