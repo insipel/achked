@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from heapq import *
+# Min heap in python
 
 class max_heap1():
     def __init__(self):
