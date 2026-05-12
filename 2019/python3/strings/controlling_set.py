@@ -1,33 +1,42 @@
 #!/usr/bin/env python3
 
-from sys import maxint
+# Problem: Given a string and a set of characters, find the length of the shortest
+# substring that contains all the characters in the set (at least once).
+
+# Note: In Python 3, sys.maxint does not exist (integers are unbounded).
+# Use float('inf') for infinity instead.
 
 #Approach1: Brute force way
 #space comp: O(n3)
 #run time comp: O(n3)
-def smatch(string, wordset):
+def smatch1(string, wordset):
     ans = []
     sstr = get_all_sstrs(string)
 
     for ss in sstr:
+        found = True
         for char in wordset:
             if char not in ss:
-                continue
+                found = False
+                break
+        if found: 
+            print(f"Found in {ss}")
             ans.append(ss)
 
 
     shortest_len = float('inf')
     for answer in ans:
         shortest_len = min(shortest_len, len(answer))
+        # print(f"Found: {shortest_len} ")
 
     return shortest_len
 
 def get_all_sstrs(string):
     sstr = []
-    temp = ''
     for i in range(len(string)):
-        for j in range(i, len(string)):
+        for j in range(i + 1, len(string) + 1):  # Fix: j from i+1 to len(string) to include full substrings ending at the string's end
             sstr.append(string[i:j])
+    print(f"sstr: {sstr}")  # Uncomment to debug: prints all substrings (O(n^2) output)
     return sstr
 
 #App2: polynomial time algorithm O(n2)
@@ -37,5 +46,4 @@ def smatch(s, p):
         for j in range(i, len(s)):
             pass
 
-maximum_int = maxint
-print(maximum_int)
+smatch1("animeshpathakisgoing", "meshet")
