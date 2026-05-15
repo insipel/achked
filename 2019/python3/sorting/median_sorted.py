@@ -22,6 +22,23 @@ def find_median(l1, l2):
         # Partition l1 at index1, and l2 at index2 such that left partitions have equal elements
         index1 = (st + end) // 2
         index2 = (len1 + len2 + 1) // 2 - index1
+        # The line above as index2 = (len1 + len2 + 1) // 2 - index1 vs 
+        #                   index2 = (len1 + len2) // 2 - index1,
+        # They are not equivalent when the total length is odd — that's precisely when the +1 matters.
+        #
+        # The +1 is a ceiling trick: (len1 + len2 + 1) // 2 always gives ceil((len1+len2)/2). For even totals, ceil and floor are the same, so both formulas agree. For odd totals they differ by 1.
+        # 
+        # Why it matters: The +1 ensures the left partition gets the extra element when the total is odd. That's what makes return max(max_left1, max_left2) on line 47 correct — the median lives in the max of the left half only if the left half is the larger one.
+        # 
+        # Concrete example: l1 = [1, 3], l2 = [2], total = 3 (odd), median = 2.
+        # 
+        # At index1 = 1:
+        # 
+        # Formula	index2	max_left1	max_left2	result
+        # with +1	    1	        1	        2	max(1,2) = 2 ✓
+        # without +1	0	        1	     -inf	max(1,-inf) = 1 ✗
+        # Without +1, you'd need to change line 47 to return min(min_right1, min_right2) to get the right answer — the two formulas just put the median on opposite sides of the partition.
+
 
         # Get the boundary elements for the partitions
         max_left1 = l1[index1 - 1] if index1 != 0 else float('-inf')  # Max in left half of l1
@@ -45,13 +62,18 @@ def find_median(l1, l2):
             else:
                 # Odd total elements: the middle element is the max of left halves
                 return max(max_left1, max_left2)
-        elif max_left1 < min_right2:
+        elif max_left1 < min_right2: # ie. max_left2 > min_right1
             # max_left2 is greater than min_right1. index1 is not partitioning to
             # find the middle of the array.
-            # Too many elements in left of l1, move partition right
+            # Too few elements in left of l1, move partition right
             st = index1 + 1
         else:
-            # Too few elements in left of l1, move partition left
+            # max_left1 > min_right2 means that max_left1 will appear after min_right2
+            # if both the arrays were sorted and merged in a single array. This means
+            # that the element contributing to the median will be before 
+            # max_left1 in the first array, l1. Hence setting the end to index1 - 1 will
+            # force the binary search to work on the left portion of l1.
+            # IOW, the left portion of l1 has too many elements
             end = index1 - 1
 
     return -1  # Should not reach here if inputs are valid
