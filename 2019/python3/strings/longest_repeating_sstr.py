@@ -1,12 +1,31 @@
 #!/usr/bin/env python3
 
+# Problem: Longest Repeating Substring
+# Given a string, find the longest substring that appears at least twice
+# (at different positions) within the string.
+#
+# Approach: Suffix Trie
+# Build a suffix trie for the input string. Every internal node in the trie
+# represents a prefix shared by two or more suffixes — i.e., a repeated
+# substring. DFS the trie, counting how many suffixes (end-of-word markers)
+# exist below each node. Any node with num_ends > 1 is a repeated substring;
+# track the longest such prefix seen.
+#
+# Example: s = "ababaa"  →  longest repeating substring: "aba"
+#
+# See the DP/LCP alternative at the bottom of this file (O(n^2) time/space).
+
+
 from suffix_trie import build_suffix, print_trie
 
+
 def find_longest(node, l, max_ends, result):
+    # l is the current path of characters from root to this node (the prefix so far)
     num_ends = 0
 
     for c in node.children:
         l.append(c)
+        # Recurse and accumulate how many suffix endings exist in this subtree
         num_ends += find_longest(node.children[c], l, max_ends, result)
         l.pop(-1)
 
@@ -14,43 +33,66 @@ def find_longest(node, l, max_ends, result):
         # introduced a double counting bug. When debugged further, I
         # found that it wasn't required. the outside node.end_of_word
         # will also take care of a$ case as well.
-        #if node.end_of_word:
+        # if node.end_of_word:
         #    num_ends += 1
         #    print("num_ends:", num_ends, ", ", ''.join(l))
 
-        #if num_ends > 1 and len(result[0]) < len(l):
+        # if num_ends > 1 and len(result[0]) < len(l):
         #    result[0] = ''.join(l)
 
     if node.end_of_word:
+        # This node is the terminal of one suffix — count it
         num_ends += 1
-        print("num_ends:", num_ends, ", ", ''.join(l))
+        print("num_ends:", num_ends, ", ", "".join(l))
 
+    # num_ends > 1 means the prefix l is shared by at least two suffixes → it repeats
     if num_ends > 1 and len(result[0]) < len(l):
-        result[0] = ''.join(l)
+        result[0] = "".join(l)
 
     return num_ends
 
 
 def main():
-    #word = 'mississippi'
-    #word = 'aaaa'
-    #word = 'efabcdhefhabcdiefi'
-    #word = 'abcdefghi'
-    word = 'ababaa'
-    #word = 'abaa'
+    # word = 'mississippi'
+    # word = 'aaaa'
+    # word = 'efabcdhefhabcdiefi'
+    # word = 'abcdefghi'
+    word = "ababaa"
+    # word = 'abaa'
     trie = build_suffix(word)
     l = []
     print_trie(trie.root, l)
 
-    l, max_ends, result = [], [0], ['']
+    # result is a list so find_longest can mutate it (Python has no pass-by-ref for strings)
+    l, max_ends, result = [], [0], [""]
     find_longest(trie.root, l, max_ends, result)
     print("longest repeating sstr is:", result[0])
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
 
 
-'''
+# Brute Force Approach
+# Try every possible substring length from longest to shortest.
+# For each length, slide a window across the string and track seen substrings in a set.
+# The first duplicate found is the longest repeating substring.
+# Time: O(n^3) — O(n^2) substrings, each hashed in O(n)
+# Space: O(n^2) — the set can hold up to O(n) substrings each of length O(n)
+def longest_repeating_brute(s):
+    n = len(s)
+    # Try lengths from n-1 down to 1; return as soon as we find a repeat
+    for length in range(n - 1, 0, -1):
+        seen = set()
+        for i in range(n - length + 1):
+            sub = s[i : i + length]
+            if sub in seen:
+                return sub  # First hit at this length is our answer
+            seen.add(sub)
+    return ""  # No repeating substring found
+
+
+"""
 
 DP Solution from the IK Editorial
 
@@ -135,4 +177,4 @@ public class other_solution {
  * Space complexity: O(n^2)
  */
 
-'''
+"""
