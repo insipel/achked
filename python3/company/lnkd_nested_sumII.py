@@ -44,12 +44,14 @@ def nested(l):
         for n in l:
             if type(n) == int:
                 cur_sum += n # repeating this sum over each level
+                print(f'adding the number {n}, cur_sum: {cur_sum}')
             else:
                 for elem in n:
-                    #print("elem:", elem)
                     nxt_list.append(elem)
+                    print("flattened list:", nxt_list)
 
         total_sum += cur_sum
+        print(f'total_sum {total_sum}')
         l = nxt_list
 
     return total_sum
