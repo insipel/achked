@@ -63,6 +63,9 @@ print(m2.heappeek())
 class MaxHeapObj(object):
   def __init__(self,val): self.val = val
   #def __lt__(self,other): return self.val > other.val
+  # we only need to override __lt__ operator becase Python's
+  # heapq module only relies on __lt__ operator and not on
+  # __gt__ operator.
   def __lt__(self,other): return self.val > other.val
   def __eq__(self,other): return self.val == other.val
   def __str__(self): return str(self.val)
