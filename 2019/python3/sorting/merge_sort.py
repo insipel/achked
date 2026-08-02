@@ -1,6 +1,44 @@
 #!/usr/bin/env python3
 
-def merge(l, st, m, end):
+def merge(arr, st, m, end):
+    # Slice the left and right sorted subarrays
+    left = arr[st : m + 1] # exclusive of m+1 indexed element
+    right = arr[m + 1 : end + 1]
+
+    i = j = 0
+    k = st
+
+    # Merge elements back into arr
+    while i < len(left) and j < len(right):
+        # If I just have < instead of <=, the stability is destroyed
+        # by not picking the left's value before right array value.
+        if left[i] <= right[j]:
+            arr[k] = left[i]
+            i += 1
+        else:
+            arr[k] = right[j]
+            j += 1
+        k += 1
+
+    # Copy any remaining elements
+    # while i < len(left):
+    #     arr[k] = left[i]
+    #     i += 1
+    #     k += 1
+
+    # while j < len(right):
+    #     arr[k] = right[j]
+    #     j += 1
+    #     k += 1
+    
+    # instead of the above char by char copy, we can do the following
+    # Copy remainders using slice assignment
+    arr[k : k + (len(left) - i)] = left[i:]
+    # (Optional) If left was exhausted first, copy right's remainders
+    k += len(left) - i  # Advance k by the number of elements copied from left
+    arr[k : k + (len(right) - j)] = right[j:]
+
+def merge_old(l, st, m, end):
     print("st:", st, ", m:", m, ", end:", end)
     n1 = m - st + 1
     n2 = end - m
@@ -44,7 +82,10 @@ def merge(l, st, m, end):
         k += 1
         j += 1
 
-def merge_sort(l, st, end):
+def merge_sort(l, st=0, end=None):
+    if end is None:
+        end = len(l) - 1
+
     if st < end:
         m = (st + end)//2
         merge_sort(l, st, m)
@@ -55,7 +96,7 @@ def merge_sort(l, st, end):
 
 def main():
     l = [3, 6, 19, 2, 14, 22, 9]
-    merge_sort(l, 0, len(l) - 1)
+    merge_sort(l)
     print(l)
 
 if __name__ == '__main__':

@@ -1,38 +1,34 @@
 #!/usr/bin/env python3
 
 def swap(a, i, j):
-    temp = a[i]
-    a[i] = a[j]
-    a[j] = temp
+    a[i], a[j] = a[j], a[i]
 
-def max_heapify(a, i, sz):
-    left = 2 * i 
-    right = 2 * i + 1
+def max_heapify(a, i, heap_size):
+    # 0-based child indices
+    left = 2 * i + 1
+    right = 2 * i + 2
+    largest = i
 
-    if left < sz and a[i] < a[left]:
+    if left < heap_size and a[left] > a[largest]:
         largest = left
-    else:
-        largest = i
-
-    if right < sz and a[right] > a[largest]:
+    if right < heap_size and a[right] > a[largest]:
         largest = right
 
-    if i != largest:
+    if largest != i:
         swap(a, i, largest)
-        max_heapify(a, largest, sz)
+        max_heapify(a, largest, heap_size)
 
 def heapsort(a):
-    sz = len(a)
-    # we can go from sz//2 to 0 or sz to 0, it doesn't matter since
-    # the guard conditions are protecting the largest check.
-    for i in range(sz//2, -1, -1):
-        max_heapify(a, i, sz)
+    n = len(a)
 
-    for sz in range(len(a) - 1, -1, -1):
-        # following is an optimization
-        #if a[0] > a[sz]:
-            swap(a, 0, sz)
-            max_heapify(a, 0, sz - 1)
+    # 1. Build Max Heap (from last non-leaf node down to root)
+    for i in range(n // 2 - 1, -1, -1):
+        max_heapify(a, i, n)
+
+    # 2. Extract elements from heap one by one
+    for heap_size in range(n - 1, 0, -1):
+        swap(a, 0, heap_size)
+        max_heapify(a, 0, heap_size)
 
 def main():
     l = [4, 3, 45, 2, 22, 15, 6, 22, 19, 18, 27]
