@@ -79,7 +79,7 @@ def kth_rank_2(l, k):
 # Main function to test the algorithms
 def main():
     l = [4, 19, 6, 14, 29, 8, 12, 23]  # Sample list
-    k = 20  # Find the 20th smallest (but list has only 8 elements)
+    k = 8  # Find the 20th smallest (but list has only 8 elements)
     if k > len(l):
         print(f"Error: Array size {len(l)} is out of range for kth: {k} element")
         return
