@@ -16,16 +16,38 @@ def serialize(node, output):
     serialize(node.left, output)
     serialize(node.right, output)
 
-def deserialize(output, idx):
+def deserialize(data_list):
+    # Use a list to store the current index so it can be mutated inside helper()
+    index_ptr = [0]
+    
+    def helper():
+        # Check if we have consumed the entire list
+        if index_ptr[0] >= len(data_list):
+            return None
+            
+        val = data_list[index_ptr[0]]
+        index_ptr[0] += 1  # Advance the pointer
+        
+        # If we hit the null marker, return None
+        if val == -1:
+            return None
+            
+        node = Node(val)
+        node.left = helper()   # Reconstruct left subtree
+        node.right = helper()  # Reconstruct right subtree
+        return node
+
+    return helper()
+
+def deserialize_old(output, idx):
+    # Same as above but cleaner, no idx being passed
     i = idx[0]
-    if not output or output[i] == -1:
+    idx[0] += 1
+    if not output or output[i] == -1 or i > len(output):
         return None
 
     node = Node(output[i])
-    idx[0] += 1
     node.left = deserialize(output, idx)
-
-    idx[0] += 1
     node.right = deserialize(output, idx)
 
     return node

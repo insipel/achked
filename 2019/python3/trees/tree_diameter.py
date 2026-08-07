@@ -7,25 +7,6 @@ class Node:
         self.left = None
         self.right = None
 
-def diameter2(root):
-    if not root:
-        #print("none dt as: ", 0)
-        return -1, 0
-
-    lh, ld = diameter2(root.left)
-    rh, rd = diameter2(root.right)
-
-    my_dt = 0
-    if lh != -1:
-        my_dt = ld+1
-    if rh != -1:
-        my_dt += rd+1
-
-    #print("returning dt for:", root.data, ", as: ", max(ld, rd, my_dt))
-    return 1, max(ld, rd, my_dt)
-
-
-
 def diameter(root):
     
     if not root:
@@ -34,11 +15,11 @@ def diameter(root):
     left_ht, left_dt = diameter(root.left)
     right_ht, right_dt = diameter(root.right)
 
-    my_ht = max(left_ht, right_ht) + 1
-    my_dt = left_dt+right_dt+2
+    current_ht = max(left_ht, right_ht) + 1
+    current_dt = left_ht+right_ht+2
 
-    act_dt = max(left_dt, my_dt, right_dt)
-    return my_ht, act_dt
+    max_dt = max(left_dt, currrent_dt, right_dt)
+    return current_ht, max_dt
 
 def insert_tree(root, data):
 

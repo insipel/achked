@@ -65,11 +65,11 @@ def print_level_tree(root):
         else:
             print(' .', end = ' ')
 
-        #if node.left:
-        if node:
+        if node.left:
+        # if node:
             q.append([node.left, level+1])
-        #if node.right:
-        if node:
+        if node.right:
+        # if node:
             q.append([node.right, level+1])
 
     print()

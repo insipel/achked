@@ -14,6 +14,19 @@
 #  2   3
 # 2 2 3 3 -> 6
 
+'''
+Given a binary tree, design an algorithm to count the total number of univalue
+subtrees (unival subtrees) present in the tree.
+
+A subtree is defined as unival if every node within that subtree has the exact
+same value. Consequently, a single leaf node is always a univalue subtree by
+definition, and a larger tree is univalue if and only if:
+    * Its left subtree is univalue (or empty),
+    * Its right subtree is univalue (or empty), and
+    * The root's value matches the value of its children (if those children
+      exist).
+'''
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -72,7 +85,7 @@ n2.right = n4
 n5.left = n6
 n5.right = n7
 
-#print(unival_count(n1))
+print(unival_count(n1))
         
         
 def is_unival(node, x):
@@ -97,7 +110,7 @@ n4 = Node(1)
 n2.left = n1
 n1.right = n3
 n2.right = n4
-#print(is_unival(n2, 1))
+# print(is_unival(n2, 1))
 
 n1 = Node(1)
 n2 = Node(1)
@@ -106,5 +119,5 @@ n4 = Node(1)
 n2.left = n1
 n1.right = n3
 n2.right = n4
-#print(is_unival(n2, 1))
+# print(is_unival(n2, 1))
 
