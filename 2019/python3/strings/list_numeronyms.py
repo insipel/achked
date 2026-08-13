@@ -28,8 +28,8 @@ def gen_numeronyms(s):
 
 
 def main():
-    # s = "animesh"
-    s = "abcd"
+    s = "animesh"
+    # s = "abcd"
     l = gen_numeronyms(s)
     print("String is:", s)
     print("Numeronyms are:", l)

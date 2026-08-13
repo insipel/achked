@@ -18,13 +18,11 @@ def fun(s, n):
     # Create a 2d character array 
     a = [[" " for x in range(l)] for y in range(n)]  
   
-    # for counting the  
-    # rows of the ZigZag 
-    row = 0
-    for i in range(l): 
+    row = 0 # for counting the rows of the ZigZag 
+    for col in range(l): 
           
         # put characters in the matrix 
-        a[row][i] = s[i];  
+        a[row][col] = s[col];  
       
         # You have reached the bottom 
         if row == n - 1: 
@@ -38,9 +36,9 @@ def fun(s, n):
             row = row - 1
   
     # Print the Zig-Zag String 
-    for i in range(n): 
-        for j in range(l): 
-            print("." + str(a[i][j]) + ".", end = " ") 
+    for row in range(n): 
+        for col in range(l): 
+            print("." + str(a[row][col]) + ".", end = " ") 
         print() 
       
 # Driver Code 
