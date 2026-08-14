@@ -1,0 +1,13 @@
+[
+    {
+        "transform": "grayscale",
+        "arg": []
+    },
+    {
+        "transform": "resize",
+        "arg": [
+            100,
+            100
+        ]
+    }
+]

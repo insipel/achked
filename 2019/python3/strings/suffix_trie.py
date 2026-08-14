@@ -11,9 +11,9 @@ class Trie:
     def __init__ (self, node):
         self.root = node
 
-def insert_trie(node, word, i):
+def insert_trie(node, word, st):
 
-    for j in range(i, len(word)):
+    for j in range(st, len(word)):
         if word[j] not in node.children:
             node.children[word[j]] = TrieNode()
         node = node.children[word[j]]

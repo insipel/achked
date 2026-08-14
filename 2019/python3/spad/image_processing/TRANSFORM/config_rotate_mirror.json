@@ -1,0 +1,12 @@
+[
+    {
+        "transform": "rotate",
+        "arg": [
+            90
+        ]
+    },
+    {
+        "transform": "mirror",
+        "arg": []
+    }
+]
