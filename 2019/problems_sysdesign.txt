@@ -1,0 +1,30 @@
+1. One huge file coming in over a constrained link. How do you distribute it to thousands of machines?
+2. How do you approach GenAI safety in consumer products?
+3. Design an API that lets a customer sample from large generative models.
+4. Design an inference batching system for a single GPU that can handle up to 100 inputs per batch while users wait synchronously, maximizing utilization under compute constraints.
+5. Implement an LRU cache with serialization and evolving constraints.
+6. Design a file cache system.
+7. How would you handle hallucinations in a generative AI model deployed to users?
+8. Brainstorm a product idea with the help of AI.
+9. Design an API to let users sample from large language models efficiently, with good batching and request orchestration.
+10. Implement a streaming database with the given constraints and requirements.
+11. Define hallucinations in LLMs.
+12. What's your approach to prompt engineering?
+13. Design a scalable system for a token-generation service used by an LLM that needs to handle up to 100,000 requests per second.
+14. *Implement an in-memory database in CodeSignal, with each round adding more functionality.
+15. Given profiler samples from running code, find the slowest part in the code.
+16. Find Cluster Mode and Median: Screening
+17. *609. Find Duplicate File in System: Leetcode/Screening
+18. Find Duplicate Files [ref]: Screening
+19. 636. Exclusive Time of Functions
+20. Generate Function Profiling Events: Screening
+21. *Design In-memory Database with Backup
+22. Debugging a Slow Inference Pipeline
+23. Design a Chat/Messaging System
+24. Design Online Chess
+25. Design a prompt playground
+26. In-Memory Database: Implement SQL-Like Operations
+27. Design an analytics dashboard for an AI chat app
+28. Design a Malware Analysis System
+
+
