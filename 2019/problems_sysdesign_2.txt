@@ -1,0 +1,90 @@
+1. Design Hit Counter
+2. Design Rate Limiter
+3. GPU Inference Batching System
+4. Design LRU Cache (Least Recently Used)
+5. Design LFU Cache (Least Frequently Used)
+6. Design Text Editor
+7. Insert Delete GetRandom O(1)
+8. Design In-Memory File System
+9. Design Bounded Blocking Queue
+.
+1. Text Editors, Cursor & State Management
+.
+1. Implement a One-Line Text Editor
+2. Design a Text Editor (LeetCode 2296)
+3. Text Editor with Undo / Redo (Command Pattern)
+4. Design RLE (Run-Length Encoded) Iterator (LeetCode 900)
+5. Design Browser History (LeetCode 1472)
+.
+2. Custom Buffers, Data Structure Design & Caches
+.
+6. LRU Cache (Least Recently Used) (LeetCode 146)
+7. LFU Cache (Least Frequently Used) (LeetCode 460)
+8. Design Circular Queue / Ring Buffer (LeetCode 622)
+9. Design Circular Deque (LeetCode 641)
+10. Insert Delete GetRandom O(1) (LeetCode 380)
+.
+3. Hierarchical, Tree & History Systems
+.
+11. Design In-Memory File System (LeetCode 588)
+12. Implement Trie / Prefix Tree (LeetCode 208)
+13. Snapshot Array (LeetCode 1146)
+14. Time-Based Key-Value Store (LeetCode 981)
+.
+4. Concurrency & Low-Level / High-Level System Design
+.
+15. Design Hit Counter (LeetCode 362)
+16. Design Bounded Blocking Queue
+17. GPU Inference Batching System Design
+.
+From Claude:
+.
+Design a Snake Game — move the snake on a board, handle food and self-collision, track score.
+Design a Min Stack — push, pop, top, and getMin all in O(1).Here are more, spanning different flavors of design-and-code problems:
+.
+Concurrency / rate control
+.
+Design a Rate Limiter (token bucket or sliding window) — implement allowRequest(userId) as a class, not just describe it.
+Design a Bounded Blocking Queue — producer-consumer with put/take that block when full/empty.
+Design a Thread-Safe Counter/ID Generator — handle concurrent increments correctly.
+.
+Text / search
+.
+Design Autocomplete System — given a prefix, return top-k historical search suggestions.
+Design a Search Suggestion System with Fuzzy Matching — tolerate typos within edit distance 1-2.
+Design a Text Editor with Undo/Redo — implement insert, delete, undo, redo efficiently.
+.
+Spatial / simulation
+.
+Design a Parking Lot System — allocate/free spots by vehicle size, track availability.
+Design a Tic-Tac-Toe / Connect Four — implement move validation and win detection efficiently (not brute force each turn).
+Design a Meeting Scheduler — book rooms, detect conflicts, find next available slot.
+Design an Elevator System — handle multiple requests, direction optimization.
+.
+Data structures with unusual constraints
+.
+Design a Skip List — implement search/insert/delete without balanced trees.
+Design a Circular Buffer / Circular Deque.
+Design a File System (in-memory) — support mkdir, addFile, readFile, ls with path parsing.
+Design a Randomized Set with Duplicates allowed — insert, remove, getRandom with duplicate values.
+Design a Sparse Vector class and implement dot product efficiently.
+.
+Event / streaming
+.
+Design a Logger Rate Limiter — suppress duplicate log messages within a time window.
+Design a Moving Average / Sliding Window Maximum — from a data stream.
+Design an Event Emitter (like Node's EventEmitter) — on, off, emit with multiple listeners.
+.
+Game/puzzle state machines
+.
+Design a Snake Game (already mentioned) or Design a Tetris board collision checker.
+Design an Undo-able Calculator — support chained operations with undo.
+
+Sync:Task Pipeline Rate-Limited
+Asynchronous: Rate-Limited Task Pipeline
+Design an admission Control system
+Implement admission control with rate limits.
+Image Transformation Scaling Strategies
+Web Crawler Design: Implementation, Considerations, and Scaling (Leetcode 1242)
+Finding Duplicate Files in a File System
+In-Memory Database
